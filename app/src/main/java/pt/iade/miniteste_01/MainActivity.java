@@ -1,12 +1,16 @@
 package pt.iade.miniteste_01;
+
+import static android.text.TextUtils.isEmpty;
+
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.Collection;
-import java.util.Collections;
+import java.util.function.Predicate;
 
 import pt.iade.miniteste_01.models.*;
 
@@ -17,33 +21,34 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
+
     EMENTA EMENTA = new EMENTA("teste");
-    public void change_window(View v) {
 
+    public void adicionar_ementa(View v){
+            TextView tmp = (TextView)findViewById(R.id.editTextCookingTime);
+            TextView name = (TextView)findViewById(R.id.editTextTextName);
+            int tmp1 = Integer.parseInt(tmp.getText().toString());
+            String name1 = name.getText().toString();
+
+            PRATO PRATO;
+            if (!isEmpty(name1)) {
+                if (tmp1 != 0) {
+                    PRATO = new PRATO(name1, tmp1);
+                } else {
+                    PRATO = new PRATO(name1);
+                }
+                EMENTA.inserir_prato(PRATO);
+            }
     }
-    TextView n_receitas = (TextView)findViewById(R.id.textView_nreceitas);
-    public void n_receitas(View v) {
+
+
+    public void n_receitas1(View v) {
+        TextView n_receitas1 = (TextView)findViewById(R.id.textView_nreceitas);
         int i = EMENTA.n_pratos(EMENTA.getPratos());
-        n_receitas.setText(i);
+        n_receitas1.setText(String.valueOf(i));
     }
-    TextView most_dificulty = (TextView)findViewById(R.id.textView_maior_dificuldade);
-    public void most_dificulty(View v) {
-        
-        String nome = null;
-        int i = EMENTA.n_pratos(EMENTA.getPratos());
-        for (int j=0 ; j <= i; j++){
-            int n = 0;
-
-        }
-        most_dificulty.setText(nome);
-    }
-    public void maior_ingredientes(View v){
-
-    }
-
-
-
 
 
 }

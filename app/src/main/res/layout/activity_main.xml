@@ -7,12 +7,13 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button_infpratos"
+        android:id="@+id/button_upload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:onClick="change_window"
+        android:layout_marginTop="28dp"
+        android:onClick="adicionar_ementa"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextView1" />
 
@@ -21,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
-        android:onClick="n_receitas"
+        android:onClick="n_receitas1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -30,9 +31,9 @@
         android:id="@+id/button_dificuldade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:onClick="most_dificulty"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -40,9 +41,9 @@
         android:id="@+id/button_maior_ingredientes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:onClick="maior_ingredientes"
+        android:layout_marginTop="56dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -50,10 +51,11 @@
         android:id="@+id/TextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="43dp"
+        android:layout_marginTop="40dp"
         android:text="Inserir receita"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,21 +63,22 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="80dp"
         android:text="Numero de receitas"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_infpratos" />
+        app:layout_constraintTop_toBottomOf="@+id/button_upload" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="63dp"
+        android:layout_marginTop="52dp"
         android:text="Receita com a maior dificuldade"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_n_receitas" />
 
@@ -83,7 +86,7 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="81dp"
+        android:layout_marginTop="60dp"
         android:text="maior numero de ingredientes"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,8 +97,9 @@
         android:id="@+id/textView_nreceitas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="278dp"
+        android:layout_marginTop="324dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -103,8 +107,9 @@
         android:id="@+id/textView_maior_dificuldade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="433dp"
+        android:layout_marginTop="476dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -112,9 +117,40 @@
         android:id="@+id/textView_maior_n_ingredientes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="617dp"
+        android:layout_marginTop="676dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="25dp"
+        android:ems="10"
+        android:hint="name"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/button_upload"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextView1" />
+
+    <EditText
+        android:id="@+id/editTextCookingTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="126dp"
+        android:ems="10"
+        android:hint="Time"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

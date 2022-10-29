@@ -11,10 +11,10 @@ public class PRATO {
     private String instru;
     private final ArrayList<String> ingredientes = new ArrayList<String>();
 
-    public void prato (String nome){
+    public PRATO (String nome){
         this.nome= nome;
     }
-    public void prato (String nome, int tmp){
+    public PRATO (String nome, int tmp){
         this.nome = nome;
         this.tmp_cozedura= tmp;
     }
