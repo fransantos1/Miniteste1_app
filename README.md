@@ -84,7 +84,16 @@ The user needs to be able to:
 Started working on the design of the app but didn't had time to finish
  
 ### DAY 2
-...
+
+Added:
+- ADD meal 
+- View number of meals
+- Tried to have it working with two activities but wasn't able to make it work
+
+
+### DAY 3
+
+
 
 
 
